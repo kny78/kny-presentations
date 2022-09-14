@@ -1,0 +1,12 @@
+/target
+.idea
+/tmp
+.*.swp
+_minted-*/
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
