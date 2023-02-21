@@ -1,0 +1,297 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{numprint}
+\usepackage{minted}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[norsk]{babel}
+\usepackage{lipsum}
+
+\newminted{json}{fontsize=\scriptsize,
+    linenos,
+    numbersep=8pt,
+    gobble=4,
+    frame=lines,
+    bgcolor=bg,
+    framesep=3mm}
+
+\newminted{kotlin}{fontsize=\scriptsize,
+    linenos,
+    numbersep=8pt,
+    gobble=4,
+    frame=lines,
+    bgcolor=bg,
+    framesep=3mm}
+
+\newminted{zsh}{fontsize=\scriptsize,
+    linenos,
+    numbersep=8pt,
+    gobble=12,
+    frame=lines,
+    bgcolor=bg,
+    framesep=3mm}
+
+
+\hypersetup{
+    colorlinks   = true,    % Colours links instead of ugly boxes
+    urlcolor     = blue,    % Colour for external hyperlinks
+    linkcolor    = blue,    % Colour of internal links
+    citecolor    = red,      % Colour of citations
+%    bookmarksopen,
+%    bookmarksnumbered,
+}
+
+
+%Information to be included in the title page:
+\title{GIT}
+\subtitle{To the core}
+\author{\href{kjetil.nygard@tietoevry.com}{Kjetil Nygård}}
+\institute{TietoEvry}
+\date{Torsdag 23. Februar 2023}
+
+\usetheme{Warsaw}
+\usecolortheme{default}
+
+
+\begin{document}
+
+    \frame{\titlepage}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Kva er Backend
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Kva er Backend}
+        \begin{columns}[c]
+            \begin{column}{.55\textwidth}
+                \begin{block}{Definisjon}
+                    Backend er den delen av eit IT-system,
+                    som ikkje nåas direte av brukeren.
+                \end{block}
+                \begin{block}{Ansvar}
+                    \begin{itemize}
+                        \item Domenelogikk
+                        \item Beslutninger
+                        \item Analyse
+                        \item Lagring
+                        \item Sikkerhet
+                    \end{itemize}
+                \end{block}
+            \end{column}
+            \begin{column}{.45\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{images/backend-iceberg}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+
+%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    % E-tinglysing
+%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    \begin{frame}
+%        \frametitle{E-tinglysing}
+%        \begin{columns}[c]
+%            \begin{column}{.55\textwidth}
+%                \begin{block}{Om Prosjektet}
+%                    \begin{itemize}
+%                        \item 2-3 tusen aktve
+%                        \item CRM data
+%                        \item Søkemotor
+%                        \item Kontosystemet i Bank
+%                        \item Beregning av skatt
+%                        \item Folkeregisteret
+%                    \end{itemize}
+%                \end{block}
+%            \end{column}
+%            \begin{column}{.45\textwidth}
+%                \begin{center}
+%                    \includegraphics[width=1.2\textwidth]{images/backend-vs-front-end-1140x515}
+%                \end{center}
+%            \end{column}
+%        \end{columns}
+%    \end{frame}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Template
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Arbeidsoppgaver}
+        \includegraphics[width=\textwidth]{images/backend-work}
+
+    \end{frame}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Template
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Domene}
+        \begin{columns}[c]
+            \begin{column}{.55\textwidth}
+                \begin{block}{Kva er domenekunnskap?}
+                    \begin{itemize}
+                        \item Eiendom
+                        \begin{itemize}
+                            \item Kan selges?
+                            \item Må ektefelle skriva under?
+                        \end{itemize}
+                        \item Folkeregisteret
+                        \begin{itemize}
+                            \item kjønnsbytte
+                            \item Sammenslåing av personar
+                        \end{itemize}
+                        \item Faktura
+                        \begin{itemize}
+                            \item Hull i fakturanr
+                            \item SAF-t koder
+                        \end{itemize}
+                    \end{itemize}
+                \end{block}
+            \end{column}
+            \begin{column}{.45\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{images/rubik}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Template
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Impact}
+        \begin{columns}[c]
+            \begin{column}{.55\textwidth}
+                \begin{block}{Nokken prosjekter}
+                    \begin{itemize}
+                        \item Websider i Nortura++
+                        \item Altibox og Premier League
+                        \item E-tinglysing
+                        \item Fakturering
+                        \item Folkeregister-porteføljer
+                    \end{itemize}
+                \end{block}
+            \end{column}
+            \begin{column}{.45\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{images/himars}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Altibox & Premier League
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Altibox \& Premier League}
+        \begin{columns}[c]
+            \begin{column}{.55\textwidth}
+                \begin{block}{Bestilling av PL via TV}
+                    \begin{itemize}
+                        \item PL rettigheter, 2år, for 1 mrd
+                        \item Bestilling via TV
+                        \item Prioritering
+                    \end{itemize}
+                \end{block}
+            \end{column}
+            \begin{column}{.45\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{images/premier-league-smaller}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Ambita Fakturering
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Ambita Fakturering}
+        \begin{columns}[c]
+            \begin{column}{.55\textwidth}
+                \begin{block}{Bytte av faktureringssystem}
+                    \begin{itemize}
+                        \item Ambita omsetter for ca 1mrd
+                        \item Millioner av fakturalinjer
+                        \item Sluttkunden
+                        \item 1\% feil → 10 mNOK
+                    \end{itemize}
+                \end{block}
+            \end{column}
+            \begin{column}{.45\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{images/altibox-logo}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Freg
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{FREG }
+        \begin{columns}[c]
+            \begin{column}{.55\textwidth}
+                \begin{block}{Distributør av FREG}
+                    \begin{itemize}
+                        \item Distributør i $> 30$ år
+                        \item $> 100$ kunder
+                        \item \emph{Alle banker}
+                        \item Ho som ikkje var dau
+                    \end{itemize}
+                \end{block}
+            \end{column}
+            \begin{column}{.45\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{images/freg-bilde}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+
+
+
+%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    % Template
+%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    \begin{frame}
+%        \frametitle{Template}
+%        \begin{columns}[c]
+%            \begin{column}{.58\textwidth}
+%                \begin{block}{Block 1}
+%                    \lipsum[1-3][1-2]
+%                \end{block}
+%            \end{column}
+%            \begin{column}{.32\textwidth}
+%                \begin{center}
+%                    \includegraphics[width=\textwidth]{images/example}
+%                \end{center}
+%            \end{column}
+%        \end{columns}
+%    \end{frame}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % The End
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Thank you for your attention}
+        Spørsmål?
+    \end{frame}
+
+\end{document}
