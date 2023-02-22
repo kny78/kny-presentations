@@ -10,4 +10,4 @@ GIT - to the core
    2. Visualization of GIT commits
 5. GIT data structure
    1. .git katalogen
-   2. git  
+   2. git 

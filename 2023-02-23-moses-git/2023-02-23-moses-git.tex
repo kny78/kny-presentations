@@ -59,102 +59,28 @@
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Kva er Backend
+    % What is GIT
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{frame}
-        \frametitle{Kva er Backend}
+        \frametitle{What is GIT}
         \begin{columns}[c]
             \begin{column}{.55\textwidth}
                 \begin{block}{Definisjon}
-                    Backend er den delen av eit IT-system,
-                    som ikkje nåas direte av brukeren.
+                    Git is a distributed version control system that tracks changes
+                    in any set of computer files.
                 \end{block}
-                \begin{block}{Ansvar}
-                    \begin{itemize}
-                        \item Domenelogikk
-                        \item Beslutninger
-                        \item Analyse
-                        \item Lagring
-                        \item Sikkerhet
-                    \end{itemize}
-                \end{block}
-            \end{column}
-            \begin{column}{.45\textwidth}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{images/backend-iceberg}
-                \end{center}
-            \end{column}
-        \end{columns}
-    \end{frame}
-
-
-%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%    % E-tinglysing
-%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%    \begin{frame}
-%        \frametitle{E-tinglysing}
-%        \begin{columns}[c]
-%            \begin{column}{.55\textwidth}
-%                \begin{block}{Om Prosjektet}
-%                    \begin{itemize}
-%                        \item 2-3 tusen aktve
-%                        \item CRM data
-%                        \item Søkemotor
-%                        \item Kontosystemet i Bank
-%                        \item Beregning av skatt
-%                        \item Folkeregisteret
-%                    \end{itemize}
-%                \end{block}
-%            \end{column}
-%            \begin{column}{.45\textwidth}
-%                \begin{center}
-%                    \includegraphics[width=1.2\textwidth]{images/backend-vs-front-end-1140x515}
-%                \end{center}
-%            \end{column}
-%        \end{columns}
-%    \end{frame}
-
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Template
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{frame}
-        \frametitle{Arbeidsoppgaver}
-        \includegraphics[width=\textwidth]{images/backend-work}
-
-    \end{frame}
-
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Template
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{frame}
-        \frametitle{Domene}
-        \begin{columns}[c]
-            \begin{column}{.55\textwidth}
-                \begin{block}{Kva er domenekunnskap?}
-                    \begin{itemize}
-                        \item Eiendom
-                        \begin{itemize}
-                            \item Kan selges?
-                            \item Må ektefelle skriva under?
-                        \end{itemize}
-                        \item Folkeregisteret
-                        \begin{itemize}
-                            \item kjønnsbytte
-                            \item Sammenslåing av personar
-                        \end{itemize}
-                        \item Faktura
-                        \begin{itemize}
-                            \item Hull i fakturanr
-                            \item SAF-t koder
-                        \end{itemize}
-                    \end{itemize}
+                \begin{block}{Content}
+                    \begin{enumerate}
+                        \item Workflows
+                        \item Datastruktur
+                        \item .git folderen
+                        \item Kommandoer
+                    \end{enumerate}
                 \end{block}
             \end{column}
             \begin{column}{.45\textwidth}
                 \begin{center}
-                    \includegraphics[width=\textwidth]{images/rubik}
+                    \includegraphics[width=\textwidth]{images/Git-Logo-2Color}
                 \end{center}
             \end{column}
         \end{columns}
@@ -162,128 +88,60 @@
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Template
+    % Commits
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{frame}
-        \frametitle{Impact}
-        \begin{columns}[c]
-            \begin{column}{.55\textwidth}
-                \begin{block}{Nokken prosjekter}
-                    \begin{itemize}
-                        \item Websider i Nortura++
-                        \item Altibox og Premier League
-                        \item E-tinglysing
-                        \item Fakturering
-                        \item Folkeregister-porteføljer
-                    \end{itemize}
-                \end{block}
-            \end{column}
-            \begin{column}{.45\textwidth}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{images/himars}
-                \end{center}
-            \end{column}
-        \end{columns}
+        \frametitle{Local development}
+        \includegraphics[width=\textwidth]{images/git-commits/01-work-phase}
     \end{frame}
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Altibox & Premier League
+    % Merge workflow
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{frame}
-        \frametitle{Altibox \& Premier League}
-        \begin{columns}[c]
-            \begin{column}{.55\textwidth}
-                \begin{block}{Bestilling av PL via TV}
-                    \begin{itemize}
-                        \item PL rettigheter, 2år, for 1 mrd
-                        \item Bestilling via TV
-                        \item Prioritering
-                    \end{itemize}
-                \end{block}
-            \end{column}
-            \begin{column}{.45\textwidth}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{images/premier-league-smaller}
-                \end{center}
-            \end{column}
-        \end{columns}
+        \frametitle{Merge workflow}
+        \includegraphics[width=\textwidth]{images/git-commits/10-merge-workflow}
     \end{frame}
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Ambita Fakturering
+    % Rebase workflow
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{frame}
-        \frametitle{Ambita Fakturering}
-        \begin{columns}[c]
-            \begin{column}{.55\textwidth}
-                \begin{block}{Bytte av faktureringssystem}
-                    \begin{itemize}
-                        \item Ambita omsetter for ca 1mrd
-                        \item Millioner av fakturalinjer
-                        \item Sluttkunden
-                        \item 1\% feil → 10 mNOK
-                    \end{itemize}
-                \end{block}
-            \end{column}
-            \begin{column}{.45\textwidth}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{images/altibox-logo}
-                \end{center}
-            \end{column}
-        \end{columns}
+        \frametitle{Rebase workflow}
+        \includegraphics[width=\textwidth]{images/git-commits/20-rebase-workflow}
     \end{frame}
 
 
-
-
-
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Freg
+    % Datastructure
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{frame}
-        \frametitle{FREG }
-        \begin{columns}[c]
-            \begin{column}{.55\textwidth}
-                \begin{block}{Distributør av FREG}
-                    \begin{itemize}
-                        \item Distributør i $> 30$ år
-                        \item $> 100$ kunder
-                        \item \emph{Alle banker}
-                        \item Ho som ikkje var dau
-                    \end{itemize}
-                \end{block}
-            \end{column}
-            \begin{column}{.45\textwidth}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{images/freg-bilde}
-                \end{center}
-            \end{column}
-        \end{columns}
+        \frametitle{Git datastructure}
+        \includegraphics[width=\textwidth]{images/git-data-model-1}
     \end{frame}
 
 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Commands
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{Commands}
 
+        \begin{block}{Content}
+            \begin{enumerate}
+                \item git reset --hard
+                \item git log --numstat
+                \item git reflog
+                \item git grep
+                \item git cat-file -p
+                \item git diff
+                \item gir rm
+            \end{enumerate}
+        \end{block}
 
-%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%    % Template
-%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%    \begin{frame}
-%        \frametitle{Template}
-%        \begin{columns}[c]
-%            \begin{column}{.58\textwidth}
-%                \begin{block}{Block 1}
-%                    \lipsum[1-3][1-2]
-%                \end{block}
-%            \end{column}
-%            \begin{column}{.32\textwidth}
-%                \begin{center}
-%                    \includegraphics[width=\textwidth]{images/example}
-%                \end{center}
-%            \end{column}
-%        \end{columns}
-%    \end{frame}
+    \end{frame}
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
